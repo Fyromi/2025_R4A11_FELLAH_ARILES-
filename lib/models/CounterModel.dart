@@ -3,14 +3,14 @@ class CounterModel {
   int counter = 0;
 
   void decrementCounter(){
-      this.counter--;
+      counter--;
   }
 
   void incrementCounter() {
-      this.counter++;
+      counter++;
   }
 
   int getCounter(){
-    return this.counter;
+    return counter;
   }
 }
