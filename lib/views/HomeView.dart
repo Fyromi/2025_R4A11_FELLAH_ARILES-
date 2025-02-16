@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Consumer<CounterViewModel>(
-      builder: (BuildContext context,CounterViewModel name,child) {
+      builder: (BuildContext context, CounterViewModel name, child) {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: primaryColor,
