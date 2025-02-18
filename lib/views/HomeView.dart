@@ -7,13 +7,13 @@ import '../core/constants/constants.dart';
 
 class HomeView extends StatelessWidget{
   const HomeView({super.key});
-
   @override
   Widget build(BuildContext context) {
+    final counterViewModel = context.watch<CounterViewModel>();
     return Consumer<CounterViewModel>(
       builder: (BuildContext context, CounterViewModel name, child) {
         return Scaffold(
-          appBar: AppBar(
+          	appBar: AppBar(
             backgroundColor: primaryColor,
             title: Text(title),
           ),

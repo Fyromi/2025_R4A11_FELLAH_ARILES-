@@ -5,15 +5,14 @@ class Page2View extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
         title: Text("Page 2",
             style: TextStyle(color: Colors.white)),
-        leading:
-        GestureDetector(
-          onTap: (){
-            Navigator.pushReplacementNamed(context, '/mainPage');
-          },
-          child: Image.asset('assets/mugiCrew.png', height: 40),
+        leading: GestureDetector(
+            onTap: (){
+                Navigator.pushReplacementNamed(context, '/mainPage');
+            },
+            child: Image.asset('assets/mugiCrew.png', height: 40),
         ),
         backgroundColor: Colors.black,
       ),

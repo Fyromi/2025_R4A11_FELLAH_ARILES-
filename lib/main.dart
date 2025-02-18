@@ -7,7 +7,9 @@ import 'package:tp1/views/Page2View.dart';
 import 'core/constants/constants.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (_) => CounterViewModel(),
+    child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,9 +17,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (_) => CounterViewModel(),
-        child: MaterialApp(
+    return MaterialApp(
             title: title,
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
               '/secondPage': (context) => Page2View(),
               '/mainPage': (context) => HomeView(),
             }
-        )
     );
   }
 }
